@@ -1,0 +1,44 @@
+/* button */
+.button{
+    width:100%;
+    border:none;
+    border-radius:var(--radius);
+    cursor:pointer;            
+    padding:var(--padding);
+  }
+  
+  .button:hover{
+    background-color: #AAAAAA;
+    box-shadow: none;
+  }
+  .primary:hover{
+    background-color: #0056b3;
+    box-shadow: none;
+  }
+  
+  .secondary:hover{
+    background-color: #5a6268;
+    box-shadow: none;
+  }
+  
+  .success:hover{
+    background-color: #218838;
+    box-shadow: none;
+  }   
+  
+  .danger:hover{
+    background-color: #c82333;
+    box-shadow: none;
+  }
+  
+  .warning:hover{
+    background-color: #d39e00;
+    box-shadow: none;
+  }
+  
+  .button-group{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    --border:1px solid red;
+  }

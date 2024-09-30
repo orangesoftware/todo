@@ -1,0 +1,71 @@
+<div class="card" style="
+                     padding:var(--padding);
+                     width:350px;
+                    ">
+    <form id="frmSetting">
+        <div id="message" class="message hidden">                            
+        </div>
+        <div class="form-element">
+            <input id="id" 
+                type="hidden" 
+                placeholder="id" 
+                value="<%= setting.id %>"
+            />
+            <label for="mobile">Mobile</label>
+            <input 
+                id="mobile" 
+                type="text" 
+                placeholder="mobile" 
+                value="<%= setting.mobile %>"
+            />
+        </div>
+        <div class="form-element-row">
+            <label for="twoFA">2FA</label>
+            <input 
+                id="twoFA" 
+                type="checkbox" 
+                placeholder="2FA" 
+                value="<%= setting.twoFA %>"
+                <% if(setting.twoFA) { %> checked <% } %>
+            />
+        </div>
+        
+        <div class="form-element-row">
+            <label for="byEmail">2FA by Email</label>
+            <input 
+                id="byEmail" 
+                type="checkbox" 
+                placeholder="2FA by Email" 
+                value="<%= setting.byEmail %>"
+                <% if(setting.byEmail) { %> checked <% } %>
+            />
+        </div>
+        
+        <div class="form-element-row">
+            <label for="enableNotifications">Enable Notifications</label>
+            <input 
+                id="enableNotifications" 
+                type="checkbox" 
+                placeholder="Enable Notifications" 
+                value="<%= setting.enableNotifications %>"
+                <% if(setting.enableNotifications) { %> checked <% } %>
+            />
+        </div>
+        
+        <div class="form-element">
+            <label for="remainderDays">Before (in days)</label>
+            <input 
+                id="remainderDays" 
+                type="number" 
+                min="0"
+                max="15"
+                placeholder="Before (in days)" 
+                value="<%= setting.remainderDays %>"
+            />
+        </div>
+        <div class="group-button">
+            <button id="btnCancelSetting" class="button" type="button">Cancel</button>
+            <button id="btnAddSetting" class="button primary" type="button">Add Setting</button>
+        </div>
+    </form>
+</div>

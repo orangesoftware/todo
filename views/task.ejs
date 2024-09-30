@@ -1,0 +1,5 @@
+<ul class="wrapper-list-task">
+    <% task.forEach(function(task) { %>
+        <li><span class="<% if (task.status=='100'){%>completed <%} else if (task.status == '-10'){%>canceled<%}%>"><%= task.title %> </span><div class="tool-actions"><a class="listOfTask" title="Edit Task" href="/task/<%= task.id %>" data-target="#wrapper"><span class="material-icons-round">edit</span></a><a href="#" title="Delete Task"><span class="material-icons-round">delete</span></a></div></li>
+    <% }); %>
+</ul>

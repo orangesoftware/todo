@@ -1,0 +1,72 @@
+<div class="card" style="
+                    padding:var(--padding);
+                    width:350px;
+                    ">
+    <form id="frmTask">
+        <div id="message" class="message hidden">                            
+        </div>
+        <div class="form-element">
+            <label for="title">Title</label>
+            <input id="id" 
+                type="hidden" 
+                placeholder="id" 
+                value="<%= task.id %>"
+            />
+            <input 
+                id="title" 
+                type="text" 
+                placeholder="Title" 
+                value="<%= task.title %>"
+            />
+        </div>
+        <div class="form-element">
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Description"><%= task.description %></textarea>
+        </div>
+        
+        <div class="form-element">
+            <label for="date">Date</label>
+            <input 
+                id="date" 
+                type="date" 
+                placeholder="YYYY/MM/DD"
+                value="<%= task.dueDate %>"
+                />
+        </div>
+        
+        <div class="form-element">
+            <label for="priority">Priority</label>
+            <select id="priority" placeholder="Priority">
+                <option value="0">Low</option>
+                <option value="10">Medium</option>
+                <option value="20">High</option>
+            </select>
+        </div>
+        
+        <div class="form-element">
+            <label for="status">Status</label>
+            <select id="status" placeholder="Status">
+                <option value="0">Pending</option>
+                <option value="-10">Cancel</option>
+                <option value="100">Complete</option>
+            </select>
+            
+        </div>
+        <div class="card-footer">
+            <div class="group-button">
+                <button 
+                    id="btnCancelTask" 
+                    class="button" 
+                    type="button"
+                    href="/task"
+                    data-target="#wrapper"
+                    >Cancel</button>
+                <button 
+                    id="btnAddTask"                     
+                    class="button primary" 
+                    type="button"
+                    >Add Task</button>
+            </div>
+        </div>
+    </form>
+</div>
